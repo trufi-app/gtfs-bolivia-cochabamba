@@ -1,0 +1,27 @@
+{
+  "name": "gtfs-bolivia-cochabamba",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "author": "Malte Dölker",
+  "license": "MIT",
+  "engines": {
+    "node": ">=8.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/trufi-app/gtfs-bolivia-cochabamba.git"
+  },
+  "bugs": {
+    "url": "https://github.com/trufi-app/gtfs-bolivia-cochabamba/issues"
+  },
+  "dependencies": {
+    "csv-load-sync": "^1.0.0",
+    "geojson-to-gtfs": "^0.1.0",
+    "osm-public-transport-export": "^1.0.0"
+  }
+}

@@ -1,0 +1,5 @@
+type,name,speed,color
+Micro,Microbús,20,6699FF
+Minibus,Minibús,25,FF0000
+Taxi trufi,Taxi de ruta fija,35,00FF66
+Gondola,Gondola,30,FFAE00
