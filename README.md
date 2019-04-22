@@ -1,6 +1,6 @@
 # gtfs-bolivia-cochabamba
 
-Configuration to transform OSM public transport data into GTFS format for Cochabamba, Bolivia. Uses [osm-public-transport-export](https://github.com/trufi-app/osm-public-transport-export) and [gtfs-bolivia-cochabamba](https://github.com/trufi-app/gtfs-bolivia-cochabamba) under the hood.
+Configuration to transform OSM public transport data into GTFS format for Cochabamba, Bolivia. Uses [osm-public-transport-export](https://github.com/trufi-app/osm-public-transport-export) and [geojson-to-gtfs](https://github.com/trufi-app/geojson-to-gtfs) under the hood.
 
 [![NPM version](https://img.shields.io/npm/v/gtfs-bolivia-cochabamba.svg?style=flat)](https://www.npmjs.com/package/gtfs-bolivia-cochabamba)
 [![GitHub release](https://img.shields.io/github/release/trufi-app/gtfs-bolivia-cochabamba.svg)](https://github.com/trufi-app/gtfs-bolivia-cochabamba/releases/)
