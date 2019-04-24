@@ -10,3 +10,21 @@ Configuration to transform OSM public transport data into GTFS format for Cochab
 ## Motivation
 
 This project is part of a set of tools to provide travel data in countries where public transport works on demand and neither bus stops nor timetables exist. Check out https://github.com/trufi-app to see more of our work.
+
+## Usage
+
+As a Node.js library
+
+```js
+const exportGtfs = require('gtfs-bolivia-cochabamba');
+exportGtfs('./gtfs.zip');
+```
+
+As a command line utility
+
+```bash
+npm install -g gtfs-bolivia-cochabamba
+gtfs-bolivia-cochabamba ./gtfs.zip
+```
+
+Note: Filename is optional in both cases. If omitted, will use `gtfs.zip` by default.
