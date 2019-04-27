@@ -37,12 +37,7 @@ module.exports = function exportGtfs(outputPath) {
 
   const gtfsConfig = (stopMapping) => ({
     prepareGeojsonFeature: (feature) => {
-      const name = feature.properties.name
-        ? feature.properties.name.trim()
-        : feature.properties.route.trim();
-      const matches = name.match(/\b([1-9][0-9]{0,}(-?[A-Z])?|[A-Z]+)\b/);
-      const line = matches ? matches[1] : name;
-
+      const line = getLineFromProperties(feature.properties);
       lineLookup.set(feature, line);
     },
     agencyId: (feature) => {
@@ -77,9 +72,7 @@ module.exports = function exportGtfs(outputPath) {
     routeLongName: (feature) => {
       const line = lineLookup.get(feature);
       const type = lineToType[line];
-      const description = feature.properties.route
-        ? feature.properties.route.trim()
-        : feature.properties.line.trim();
+      const description = getRouteNameFromProperties(feature.properties);
 
       return `${description} (${type})`;
     },
@@ -101,4 +94,26 @@ module.exports = function exportGtfs(outputPath) {
   osmToGeojson(osmExportConfig).then(data => {
     geojsonToGtfs(data.geojson, outputPath, gtfsConfig(data.stops));  
   });
+}
+
+function getLineFromProperties(properties) {
+  const lineCandidate = properties.ref || properties.name;
+
+  return lineCandidate
+    // Only use text before the colon
+    .split(':', 2)[0]
+    // Remove car type
+    .replace(/(?:Bus|Minibus|Microbus|Trufi)/ig, '')
+    // Remove surrounding space
+    .trim()
+    // Remove everything but the last word
+    .replace(/^(?:.+\s)+/, '');
+}
+
+function getRouteNameFromProperties(properties) {
+  return properties.name
+    // Remove everything before the colon
+    .substr(properties.name.indexOf(':') + 1)
+    // Remove surrounding space
+    .trim();
 }

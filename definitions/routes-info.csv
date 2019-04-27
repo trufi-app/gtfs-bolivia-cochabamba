@@ -6,6 +6,7 @@ name,type,agency
 19,Minibus,16 de noviembre
 265,Minibus,3 de noviembre
 106,Minibus,Asociación Atispa
+016,Taxi trufi,Asociación de transporte integrado de servicio público Apote
 108,Taxi trufi,Asociación de transporte mixto Oruro
 138,Taxi trufi,Asociación de transporte mixto Oruro
 148,Minibus,Asociación de transporte mixto Oruro
@@ -89,6 +90,7 @@ Y,Micro,Sindicato de colectiveros y microbuses radio urbano y suburbano ciudad d
 124,Minibus,Sindicato mixto de autotransporte Sacaba
 230,Minibus,Sindicato mixto de autotransporte Sacaba
 233,Minibus,Sindicato mixto de autotransporte Sacaba
+240,Minibus,Sindicato mixto de autotransporte Sacaba
 241,Minibus,Sindicato mixto de autotransporte Sacaba
 242,Minibus,Sindicato mixto de autotransporte Sacaba
 N,Micro,Sindicato mixto de autotransporte Sacaba
@@ -120,3 +122,7 @@ Z,Minibus,Tiquipaya
 Q,Micro,Urkupiña
 51,Minibus,Virgen del Carmen
 Teleferico,Gondola,EMAVRA
+211R,Minibus,Línea 211R
+D,Minibus,Línea D
+250,Micro,Línea 250
+Taquiña,Taxi trufi,Taquiña
