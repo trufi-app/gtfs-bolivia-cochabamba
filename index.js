@@ -92,6 +92,8 @@ module.exports = function exportGtfs(outputPath) {
 
   // Convert
   osmToGeojson(osmExportConfig).then(data => {
+    // Write log to STDOUT
+    console.log(data.log);
     geojsonToGtfs(data.geojson, outputPath, gtfsConfig(data.stops));  
   });
 }
