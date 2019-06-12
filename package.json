@@ -22,7 +22,7 @@
   },
   "dependencies": {
     "csv-load-sync": "^1.0.0",
-    "geojson-to-gtfs": "^0.2.0",
-    "osm-public-transport-export": "^1.0.0"
+    "geojson-to-gtfs": "^0.2.1",
+    "osm-public-transport-export": "^1.0.1"
   }
 }
